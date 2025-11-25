@@ -43,17 +43,19 @@ Stop containers:
 docker-compose down
 ```
 
+<img width="1920" height="1005" alt="image" src="https://github.com/user-attachments/assets/33c35cb5-12fa-42e4-b8da-c91ed9de83b8" />
+
 ---
 
 ## Running the Application Without Docker
 
-Linux
+Linux/macOS
 
 ```
 ./mvnw spring-boot:run
 ```
 
-or Windows
+Windows
 
 ```
 mvn spring-boot:run
@@ -63,10 +65,11 @@ mvn spring-boot:run
 
 ## Database Configuration
 
-The application can run locally or inside Docker, so the database URL changes depending on the environment.
+The application can be executed either locally or entirely through Docker.
+Therefore, the database URL changes depending on the environment.
 
 
-Local run example (no Docker):
+Local environment (no Docker):
 ```
 spring.datasource.url=jdbc:postgresql://localhost:5432/course_api
 spring.datasource.username=postgres
@@ -74,7 +77,7 @@ spring.datasource.password=yourpassword
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-Docker example (API + PostgreSQL inside Docker):
+Docker environment (API + PostgreSQL running in containers):
 ```
 spring.datasource.url=jdbc:postgresql://postgres:5432/course_api
 spring.datasource.username=postgres
@@ -129,11 +132,13 @@ springboot-course-api-dockerized/
 
 ## Demo
 
-A short video is included showing how the API is used via **Postman** (Vídeo API Java.mp4).
+A demo video (Video API Java.mp4) is included in the repository showing how to use the API via Postman.
 
 ---
 
 ## API Endpoints
+
+## Topics
 
 ### Get all topics
 
@@ -155,8 +160,9 @@ A short video is included showing how the API is used via **Postman** (Vídeo AP
 
 `DELETE /topic/{id}`
 
+---
 
-
+## Courses
 
 ### Get all courses
 
@@ -178,8 +184,9 @@ A short video is included showing how the API is used via **Postman** (Vídeo AP
 
 `DELETE /topic/{topicId}/course/{id}`
 
+---
 
-
+## Lessons
 
 ### Get all lessons
 
@@ -201,8 +208,9 @@ A short video is included showing how the API is used via **Postman** (Vídeo AP
 
 `DELETE /topic/{topicId}/course/{courseId}/lesson/{id}`
 
+---
 
-
+## Users
 
 ### Get all users
 
@@ -223,6 +231,3 @@ A short video is included showing how the API is used via **Postman** (Vídeo AP
 ### Delete a user
 
 `DELETE /users/{id}`
-
-
----
