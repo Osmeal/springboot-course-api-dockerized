@@ -86,7 +86,8 @@ spring.jpa.hibernate.ddl-auto=update
 
 ## Project Structure
 
-project-root/
+```
+springboot-course-api-dockerized/
 ├── src/
 │   └── main/
 │       ├── resources/
@@ -122,8 +123,7 @@ project-root/
 ├── mvnw.cmd
 ├── pom.xml
 └── README.md
-
-
+```
 
 ---
 
